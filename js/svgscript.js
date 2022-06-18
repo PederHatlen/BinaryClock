@@ -2,9 +2,10 @@ let settingsEl = document.getElementById("settings");
 let scEl = document.getElementById("settingsContent");
 let toggleSettingsEl = document.getElementById("toggleSettings");
 let modeSelectEl = document.getElementById("mode");
-
+let downloadbtnEl = document.getElementById("downloadbtn");
 let manualTimeEl = document.getElementById("manualtime");
 let doManualTimeEl = document.getElementById("domanualtime");
+
 
 let smallClockEl = document.getElementById("smallClock");
 let bigClockEl = document.getElementById("bigClock");
@@ -16,6 +17,7 @@ let columns;
 let mode;
 
 let stopped = false;
+let rawtime;
 
 function setup(){
     mode = modeSelectEl.value;
@@ -37,7 +39,6 @@ function setup(){
 	render();
 }
 function render(){
-    let rawtime;
     if (manualTimeEl.value != "") {rawtime = new Date(manualTimeEl.valueAsNumber-(36*10**5));}else{rawtime = new Date();}
 	let binarytime;
 	switch (mode){
@@ -56,7 +57,8 @@ function render(){
 
 	for (let i = 0; i < 3; i++){
 		for (let j = 0; j < columns[i].childNodes.length; j++){
-			columns[i].childNodes[j].classList = (binarytime[i][j] == "1"? "one":"zero");
+			// columns[i].childNodes[j].classList = (binarytime[i][j] == "1"? "one":"zero");
+			columns[i].childNodes[j].style.fill = (binarytime[i][j] == "1"? "#fff":"#222");
 		}
 	}
 	if(!stopped){window.requestAnimationFrame(render);}
@@ -72,6 +74,18 @@ function togglesettings(){
 		settingsEl.style.backgroundColor = "";
 	}
 }
+
+// Modification of https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server
+function download() {
+	var element = document.createElement('a');
+	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(`<?xml version="1.0" encoding="utf-8"?>`+Array.from([smallClockEl.outerHTML, bigClockEl.outerHTML])[mode-1]));
+	element.setAttribute('download', `binaryClock_${("00"+rawtime.getHours()).slice(-2)}-${("00"+rawtime.getMinutes()).slice(-2)}-${("00"+rawtime.getSeconds()).slice(-2)}.svg`);
+	element.style.display = 'none';
+	document.body.appendChild(element);
+	element.click();
+	document.body.removeChild(element);
+}
+downloadbtnEl.addEventListener("click", download);
 
 modeSelectEl.addEventListener("input", setup);
 window.addEventListener("resize", setup);
