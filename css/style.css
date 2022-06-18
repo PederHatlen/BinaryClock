@@ -42,8 +42,26 @@ canvas{
 	display: flex;
 	align-items: center;
 }
-a{display: flex;}
+a{
+	display: flex;
+	color: white;
+}
+a:hover{color: #aaa;}
+#svgversion{
+	position:fixed;
+	bottom:1rem;
+}
+.dot{
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 50%;
+	margin: 10px;
+}
+.none{background: #00000000; fill: #00000000;}
+.one{background: #fff; fill: #fff;}
+.zero{background: #222; fill: #222;}
 
+/* HTML Version */
 #clock{
 	width: fit-content;
 	height: fit-content;
@@ -61,10 +79,5 @@ a{display: flex;}
 	grid-auto-flow: column;
 }
 
-.dot{
-	max-width: 100%;
-	max-height: 100%;
-	border-radius: 50%;
-	margin: 10px;
-}
-.none{background-color: #00000000;}
+/* SVG Version */
+#bigClock, #smallClock{max-width: 75vmin; max-height: 75vmin;}

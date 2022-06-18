@@ -2,8 +2,6 @@ let settingsEl = document.getElementById("settings");
 let scEl = document.getElementById("settingsContent");
 let toggleSettingsEl = document.getElementById("toggleSettings");
 let modeSelectEl = document.getElementById("mode");
-// let canvasEL = document.getElementById("canvas");
-// let ctx = canvasEL.getContext("2d");
 
 let hoursEl = document.getElementById("hours");
 let secondsEl = document.getElementById("seconds");
@@ -48,8 +46,8 @@ function render(){
 			break;
 		case "2":
 			let rawsec = [Math.floor(rawtime.getSeconds()/10), rawtime.getSeconds()%10];
-			let rawmin = [("0"+rawtime.getMinutes()).slice(1), rawtime.getMinutes()%10];
-			let rawhou = [("0"+rawtime.getHours()).slice(1), rawtime.getHours()%10];
+			let rawmin = [Math.floor(rawtime.getMinutes()/10), rawtime.getMinutes()%10];
+			let rawhou = [Math.floor(rawtime.getHours()/10), rawtime.getHours()%10];
 
 			t = [("0000"+rawhou[0].toString(2)).slice(-rCount)+("0000"+rawhou[1].toString(2)).slice(-rCount), 
 			("0000"+rawmin[0].toString(2)).slice(-rCount)+("0000"+rawmin[1].toString(2)).slice(-rCount), 

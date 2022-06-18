@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="bigClock" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 40" xml:space="preserve">
+	<style>
+		.dot{fill:#0B0E1E;}
+		.one{fill:#fff}
+		.zero{fill: #222;}
+	</style>
+	<g id="h">
+		<circle class="zero" cx="5" cy="15" r="4.5"/>
+		<circle class="zero" cx="5" cy="25" r="4.5"/>
+		<circle class="zero" cx="5" cy="35" r="4.5"/>
+		<circle class="zero" cx="15" cy="5" r="4.5"/>
+		<circle class="zero" cx="15" cy="15" r="4.5"/>
+		<circle class="zero" cx="15" cy="25" r="4.5"/>
+		<circle class="zero" cx="15" cy="35" r="4.5"/>
+	</g>
+	<g id="m">
+		<circle class="zero" cx="25" cy="15" r="4.5"/>
+		<circle class="zero" cx="25" cy="25" r="4.5"/>
+		<circle class="zero" cx="25" cy="35" r="4.5"/>
+		<circle class="zero" cx="35" cy="5" r="4.5"/>
+		<circle class="zero" cx="35" cy="15" r="4.5"/>
+		<circle class="zero" cx="35" cy="25" r="4.5"/>
+		<circle class="zero" cx="35" cy="35" r="4.5"/>
+	</g>
+	<g id="s">
+		<circle class="zero" cx="45" cy="15" r="4.5"/>
+		<circle class="zero" cx="45" cy="25" r="4.5"/>
+		<circle class="zero" cx="45" cy="35" r="4.5"/>
+		<circle class="zero" cx="55" cy="5" r="4.5"/>
+		<circle class="zero" cx="55" cy="15" r="4.5"/>
+		<circle class="zero" cx="55" cy="25" r="4.5"/>
+		<circle class="zero" cx="55" cy="35" r="4.5"/>
+	</g>
+</svg>
