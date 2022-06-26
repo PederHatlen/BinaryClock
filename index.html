@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>BinaryClock</title>
+	<title>BinaryClock - SVG version</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,14 +16,24 @@
 				<option value="1">1 column</option>
 				<option value="2">2 column</option>
 			</select>
+			&nbsp;
+			<button id="downloadbtn">Download current clock</button>
+			&nbsp;
+			<label for="domanualtime">Manual mode: </label>
+			<input type="time" name="manualtime" id="manualtime" step="1">
 		</div>
 	</div>
-	<div id="clock">
-		<div class="column" id="hours"></div>
-		<div class="column" id="minutes"></div>
-		<div class="column" id="seconds"></div>
-	</div>
-	<a href="svgversion.html" id="svgversion">Svg version</a>
-	<script src="js/script.js"></script>
+	<svg id="bigClock" style="display: none; background: black;" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40">
+		<g id="bigh"><circle class="none" cx="5" cy="15" r="4.5"/><circle class="none" cx="5" cy="25" r="4.5"/><circle class="none" cx="5" cy="35" r="4.5"/><circle class="none" cx="15" cy="5" r="4.5"/><circle class="none" cx="15" cy="15" r="4.5"/><circle class="none" cx="15" cy="25" r="4.5"/><circle class="none" cx="15" cy="35" r="4.5"/></g>
+		<g id="bigm"><circle class="none" cx="25" cy="15" r="4.5"/><circle class="none" cx="25" cy="25" r="4.5"/><circle class="none" cx="25" cy="35" r="4.5"/><circle class="none" cx="35" cy="5" r="4.5"/><circle class="none" cx="35" cy="15" r="4.5"/><circle class="none" cx="35" cy="25" r="4.5"/><circle class="none" cx="35" cy="35" r="4.5"/></g>
+		<g id="bigs"><circle class="none" cx="45" cy="15" r="4.5"/><circle class="none" cx="45" cy="25" r="4.5"/><circle class="none" cx="45" cy="35" r="4.5"/><circle class="none" cx="55" cy="5" r="4.5"/><circle class="none" cx="55" cy="15" r="4.5"/><circle class="none" cx="55" cy="25" r="4.5"/><circle class="none" cx="55" cy="35" r="4.5"/></g>
+	</svg>
+	<svg id="smallClock" style="display: none; background: black;" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 60">
+		<g id="smallh"><circle class="none" cx="5" cy="15" r="4.5"/><circle class="none" cx="5" cy="25" r="4.5"/><circle class="none" cx="5" cy="35" r="4.5"/><circle class="none" cx="5" cy="45" r="4.5"/><circle class="none" cx="5" cy="55" r="4.5"/></g>
+		<g id="smallm"><circle class="none" cx="15" cy="5" r="4.5"/><circle class="none" cx="15" cy="15" r="4.5"/><circle class="none" cx="15" cy="25" r="4.5"/><circle class="none" cx="15" cy="35" r="4.5"/><circle class="none" cx="15" cy="45" r="4.5"/><circle class="none" cx="15" cy="55" r="4.5"/></g>
+		<g id="smalls"><circle class="none" cx="25" cy="5" r="4.5"/><circle class="none" cx="25" cy="15" r="4.5"/><circle class="none" cx="25" cy="25" r="4.5"/><circle class="none" cx="25" cy="35" r="4.5"/><circle class="none" cx="25" cy="45" r="4.5"/><circle class="none" cx="25" cy="55" r="4.5"/></g>
+	</svg>
+	<a href="htmlversion.html" id="link">Html version</a>
+	<script src="js/svgscript.js"></script>
 </body>
 </html>

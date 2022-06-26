@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BinaryClock</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="settings">
+		<a href="#" id="toggleSettings"><svg xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 0 24 24" width="3rem" style="fill: #ffffff;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a>
+		<div id="settingsContent" style="display: none;">
+			<label for="mode">Mode:&nbsp;</label>
+			<select name="mode" id="mode">
+				<option value="1">1 column</option>
+				<option value="2">2 column</option>
+			</select>
+		</div>
+	</div>
+	<div id="clock">
+		<div class="column" id="hours"></div>
+		<div class="column" id="minutes"></div>
+		<div class="column" id="seconds"></div>
+	</div>
+	<a href="index.html" id="link">Svg version</a>
+	<script src="js/script.js"></script>
+</body>
+</html>

@@ -47,7 +47,7 @@ a{
 	color: white;
 }
 a:hover{color: #aaa;}
-#svgversion{
+#link{
 	position:fixed;
 	bottom:1rem;
 }
